@@ -8,7 +8,7 @@ h2 {
 }
 
 mat-form-field {
-  width: calc(100% -40px);
+  width: 80%;
 }
 
 .hours {
@@ -23,4 +23,25 @@ mat-form-field {
   max-width: 75px;
   margin-left: 15px;
   text-align: center;
+}
+
+.total-cell {
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  border-bottom: 1px solid black;
+}
+
+td {
+  text-align: center;
+  padding: 10px 0px;
+}
+
+tr td {
+  border-bottom:1pt solid #C1C1C1;
 }

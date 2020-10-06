@@ -17,7 +17,7 @@ export class TimesheetComponent implements OnInit {
   employees: Employee[] = [];
   employeeId = 0;
   departmentRouteParam = 'id';
-  weekdays: string[] = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+  weekdays: string[] = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
 
   constructor(
     private route: ActivatedRoute,
@@ -63,6 +63,15 @@ export class TimesheetComponent implements OnInit {
         }
         return error;
     };
+  }
+
+  getTotalHours(employee: Employee): number {
+    return employee.monday + employee.tuesday + employee.wednesday + employee.thursday +
+           employee.friday + employee.saturday + employee.sunday;
+  }
+
+  deleteEmployee(index: number): void {
+    this.employees.splice(index, 1);
 }
 
 }
